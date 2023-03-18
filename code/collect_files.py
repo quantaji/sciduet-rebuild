@@ -113,10 +113,6 @@ def get_pdfs_from_csv(csv_pth: str, pdf_dir: str, url_dir: str) -> None:
     if not os.path.exists(os.path.join(collection_pdf_dir, 'slides')):
         os.makedirs(os.path.join(collection_pdf_dir, 'slides'))
 
-    collection_url_dir = os.path.join(url_dir, collection_name)
-    if not os.path.exists(collection_url_dir):
-        os.makedirs(collection_url_dir)
-
     pair_all = {
         'index': [],
         'title': [],
@@ -148,7 +144,7 @@ def get_pdfs_from_csv(csv_pth: str, pdf_dir: str, url_dir: str) -> None:
 
             index += 1
 
-    pd.DataFrame(pair_all).to_csv(os.path.abspath(os.path.join(collection_url_dir, collection_name + '.csv')))
+    pd.DataFrame(pair_all).to_csv(os.path.abspath(os.path.join(url_dir, collection_name + '.csv')))
     print('Total available pairs: ', index)
 
 
