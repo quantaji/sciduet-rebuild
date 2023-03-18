@@ -112,6 +112,8 @@ def get_pdfs_from_csv(csv_pth: str, pdf_dir: str, url_dir: str) -> None:
         os.makedirs(os.path.join(collection_pdf_dir, 'papers'))
     if not os.path.exists(os.path.join(collection_pdf_dir, 'slides')):
         os.makedirs(os.path.join(collection_pdf_dir, 'slides'))
+    if not os.path.exists(url_dir):
+        os.makedirs(url_dir)
 
     pair_all = {
         'index': [],
