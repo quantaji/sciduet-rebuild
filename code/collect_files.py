@@ -160,6 +160,6 @@ if __name__ == "__main__":
         csv_pth = os.path.join(urls_dir, csv_name)
         get_pdfs_from_csv(
             csv_pth=csv_pth,
-            pdf_dir='../initial_data/stage_2/pdf',
-            url_dir='../initial_data/stage_2/extracted_url',
+            pdf_dir='./initial_data/stage_2/pdf',
+            url_dir='./initial_data/stage_2/extracted_url',
         )
