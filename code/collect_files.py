@@ -6,7 +6,8 @@ from bs4 import BeautifulSoup
 import PyPDF2
 import os
 import pandas as pd
-from tqdm import tqdm
+
+# this can also not be multi-processed, because the use of BeautifulSoup
 
 
 def get_pdf(url: str, tgt_pth: str) -> bool:

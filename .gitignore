@@ -1,6 +1,12 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 data/
 data_old/
 exception_list/
 initial_data/stage_2/pdf
 test_code/
 test_data_folder/
+initial_data/stage_2/paper_xml
