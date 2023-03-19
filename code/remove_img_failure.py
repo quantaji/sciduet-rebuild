@@ -1,9 +1,6 @@
 from pathlib import Path
 import pandas as pd
 import os
-from grobid_client.grobid_client import GrobidClient
-import shutil
-from subprocess import call
 import json
 
 if __name__ == '__main__':
