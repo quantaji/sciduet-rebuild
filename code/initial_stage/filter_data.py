@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
                 new_paper_pth = os.path.join(paper_dir, id + '.pdf')
                 new_slide_pth = os.path.join(slide_dir, id + '.pdf')
-                new_xml_pth = os.path.join(paper_dir, id + '.tei.xml')
+                new_xml_pth = os.path.join(xml_dir, id + '.tei.xml')
 
                 pair['uuid'].append(id)
                 pair['title'].append(item['title'])
