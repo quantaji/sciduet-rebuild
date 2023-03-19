@@ -18,6 +18,7 @@ if __name__ == '__main__':
         img_dir = os.path.join(collection_dir, 'figure/image')
         xml_dir = os.path.join(collection_dir, 'xml')
         slide_dir = os.path.join(collection_dir, 'slide')
+        json_dir = os.path.join(collection_dir, 'json')
 
         data = pd.read_csv(os.path.join(collection_dir, 'list.csv'), index_col='uuid')
         # # .set_index(keys='uuid')
@@ -34,6 +35,7 @@ if __name__ == '__main__':
                 return data
 
             paper_pth = os.path.join(paper_dir, tgt_uuid + '.pdf')
+            json_pth = os.path.join(paper_dir, tgt_uuid + '.json')
             slide_pth = os.path.join(slide_dir, tgt_uuid + '.pdf')
             xml_pth = os.path.join(xml_dir, tgt_uuid + '.tei.xml')
             fig_json_pth = os.path.join(figure_dir, 'json', tgt_uuid + '.json')
@@ -42,6 +44,7 @@ if __name__ == '__main__':
                 paper_pth,
                 slide_pth,
                 xml_pth,
+                json_pth,
                 fig_json_pth,
             ]
             for name in os.listdir(img_dir):
