@@ -3,10 +3,16 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-data/
+!data/
+data/*
+!data/iclr_2021/list.csv
+# data_old/*
+# exception_list/*
+# initial_data/*
+# test_code/*
+# test_data_folder/*
 data_old/
 exception_list/
-initial_data/stage_2/pdf
+initial_data/
 test_code/
-test_data_folder/
-initial_data/stage_2/paper_xml
+test_data_folder
