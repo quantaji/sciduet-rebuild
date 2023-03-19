@@ -6,14 +6,3 @@ __pycache__/
 !data/*/*/
 data/*/*
 !data/*/list.csv
-# data_old/*
-# exception_list/*
-# initial_data/*
-# test_code/*
-# test_data_folder/*
-data_old/
-exception_list/
-initial_data/
-test_code/
-test_data_folder
-data_backup/
