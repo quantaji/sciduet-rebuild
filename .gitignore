@@ -3,9 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-!data/
-data/*
-!data/iclr_2021/list.csv
+!data/*/*/
+data/*/*
+!data/*/list.csv
 # data_old/*
 # exception_list/*
 # initial_data/*
