@@ -6,3 +6,6 @@ __pycache__/
 !data/*/*/
 data/*/*
 !data/*/list.csv
+
+sciduet-data.tar.gz
+test/*

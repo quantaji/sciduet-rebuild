@@ -5,13 +5,15 @@ This is the rebuild of [SciDuet](https://github.com/IBM/document2slides) dataset
 ## Get the data
 ```shell
 # step 1: download pdfs, need webarchieve python package
-python code/download_pdfs.py
+python core/download_pdfs.py
 # step 2: extract xml from paper pdfs, need java8 and GROBID running in the background
-python code/paper2xml.py
+python core/paper2xml.py
 # step 3: extract figures and their captions, need sbt installed
-python code/paper2fig.py
+python core/paper2fig.py
 # step 4: remove failure case
-python code/remove_img_failure.py
+python core/remove_img_failure.py
 # step 5: merge xml and figures into json file
-python code/merge2json.py
+python core/merge2json.py
 ```
+
+<!-- To run `code/extrace_slides.py` you need to  -->
