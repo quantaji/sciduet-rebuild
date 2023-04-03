@@ -39,8 +39,16 @@ if __name__ == '__main__':
 
     nlp_rouge = nlp.load_metric('rouge')
 
-    entries = []
-
+    # neurips_2018
+    # neurips_2019
+    # neurips_2021
+    # neurips_2022
+    # icml_2019
+    # icml_2020
+    # icml_2021
+    # icml_2022
+    # iclr_2021
+    # iclr_2022
     for name in collection_names:
         print(name)
         collection_dir = os.path.join(data_dir, name)
@@ -50,8 +58,10 @@ if __name__ == '__main__':
 
         data = pd.read_csv(os.path.join(collection_dir, 'list.csv'), index_col='uuid')
 
+        entries = []
+
         for uuid, data_item in tqdm(data.iterrows()):
-            # for uuid, data_item in tqdm(data[:1].iterrows()):
+        # for uuid, data_item in tqdm(data[:1].iterrows()):
             paper_json_pth = os.path.join(json_dir, uuid + '.json')
             slide_json_pth = os.path.join(slide_json_dir, uuid + '.json')
 
@@ -113,9 +123,10 @@ if __name__ == '__main__':
             paper_f.close()
             slide_f.close()
 
-        entries.append(pair)
+            entries.append(pair)
 
-    results = pd.DataFrame(entries)
-
-    # pkl and json are the same information
-    results.to_pickle(os.path.join(data_dir, 'data.pkl'))
+        
+        results = pd.DataFrame(entries)
+        # print(results)
+        # pkl and json are the same information
+        results.to_pickle(os.path.join(collection_dir, 'data.pkl'))
